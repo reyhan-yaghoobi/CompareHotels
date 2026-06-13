@@ -1,0 +1,152 @@
+.hotel-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    p {
+      position: absolute;
+      direction: ltr;
+      top: 1px;
+      right: 6px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: $white;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+
+      &:after {
+        content: "⭐";
+        font-size: 10px;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+    flex-grow: 1;
+
+    .hotel__name {
+      direction: rtl;
+      margin: 0;
+      font-size: 1.1rem;
+      color: $text-color;
+    }
+
+    .hotel__city {
+      direction: rtl;
+      color: #757a79;
+      margin-right: 20px;
+      font-size: 17px;
+    }
+  }
+
+  &__rating-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+  }
+
+  .hotel__comment {
+    margin: 0;
+    color: lighten($text-color, 20%);
+    font-size: 0.85rem;
+
+    &::after {
+      margin-right: 2px;
+      content: " نظر";
+    }
+  }
+
+  .hotel__rating {
+    direction: ltr;
+    color: $primary-color;
+    font-weight: bold;
+    background-color: lighten($primary-color, 41%);
+    border-radius: 6px;
+    padding: 4px 12px;
+    margin: 0;
+
+    &:after {
+      content: "⭐";
+      font-size: 15px;
+      margin-left: 4px;
+      color: $primary-color;
+    }
+  }
+
+  &__amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    .hotel__amenity {
+      background-color: $background-color;
+      color: #757a79;
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+
+    .hotel__compare-btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      cursor: pointer;
+      background: transparent;
+      transition: 0.3s;
+
+      &:hover{
+        background-color: $primary-color;
+        color: $white;
+      }
+    }
+
+    .price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .hotel__price {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
+
+}
+

@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "هتل پارسیان آزادی",
+    "city": "تهران",
+    "stars": 5,
+    "pricePerNight": 4500000,
+    "rating": 4.7,
+    "reviewCount": 312,
+    "amenities": ["پارکینگ", "استخر", "رستوران", "سالن ورزشی", "wifi"],
+    "cancellation": "free",
+    "breakfast": true,
+    "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
+  },
+  {
+    "id": 2,
+    "name": "هتل اسپیناس پالاس",
+    "city": "تهران",
+    "stars": 4,
+    "pricePerNight": 3200000,
+    "rating": 4.3,
+    "reviewCount": 185,
+    "amenities": ["پارکینگ", "wifi", "صبحانه"],
+    "cancellation": "paid",
+    "breakfast": true,
+    "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
+  },
+  {
+    "id": 3,
+    "name": "هتل المپیک",
+    "city": "اصفهان",
+    "stars": 3,
+    "pricePerNight": 1800000,
+    "rating": 3.9,
+    "reviewCount": 94,
+    "amenities": ["wifi", "رستوران"],
+    "cancellation": "none",
+    "breakfast": false,
+    "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
+  },
+  {
+    "id": 4,
+    "name": "هتل قصر طلایی",
+    "city": "مشهد",
+    "stars": 5,
+    "pricePerNight": 5100000,
+    "rating": 4.8,
+    "reviewCount": 521,
+    "amenities": ["پارکینگ", "استخر", "رستوران", "wifi", "اسپا"],
+    "cancellation": "free",
+    "breakfast": true,
+    "image": "https://www.eghamat24.com/media/images/web/cities-new/shiraz.avif"
+  },
+  {
+    "id": 5,
+    "name": "هتل شایان کیش",
+    "city": "کیش",
+    "stars": 4,
+    "pricePerNight": 2900000,
+    "rating": 4.1,
+    "reviewCount": 143,
+    "amenities": ["استخر", "رستوران", "wifi", "ساحل"],
+    "cancellation": "free",
+    "breakfast": false,
+    "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
+  },
+  {
+    "id": 6,
+    "name": "هتل عباسی",
+    "city": "اصفهان",
+    "stars": 5,
+    "pricePerNight": 4100000,
+    "rating": 4.9,
+    "reviewCount": 789,
+    "amenities": ["باغ", "رستوران", "wifi", "پارکینگ"],
+    "cancellation": "paid",
+    "breakfast": true,
+    "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
+  }
+]
