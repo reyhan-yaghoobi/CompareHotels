@@ -8,7 +8,7 @@
     "rating": 4.7,
     "reviewCount": 312,
     "amenities": ["پارکینگ", "استخر", "رستوران", "سالن ورزشی", "wifi"],
-    "cancellation": "free",
+    "cancellation":  true,
     "breakfast": true,
     "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
   },
@@ -21,7 +21,7 @@
     "rating": 4.3,
     "reviewCount": 185,
     "amenities": ["پارکینگ", "wifi", "صبحانه"],
-    "cancellation": "paid",
+    "cancellation": false,
     "breakfast": true,
     "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
   },
@@ -34,7 +34,7 @@
     "rating": 3.9,
     "reviewCount": 94,
     "amenities": ["wifi", "رستوران"],
-    "cancellation": "none",
+    "cancellation": false,
     "breakfast": false,
     "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
   },
@@ -47,9 +47,9 @@
     "rating": 4.8,
     "reviewCount": 521,
     "amenities": ["پارکینگ", "استخر", "رستوران", "wifi", "اسپا"],
-    "cancellation": "free",
+    "cancellation": true,
     "breakfast": true,
-    "image": "https://www.eghamat24.com/media/images/web/cities-new/shiraz.avif"
+    "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
   },
   {
     "id": 5,
@@ -60,7 +60,7 @@
     "rating": 4.1,
     "reviewCount": 143,
     "amenities": ["استخر", "رستوران", "wifi", "ساحل"],
-    "cancellation": "free",
+    "cancellation": true,
     "breakfast": false,
     "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
   },
@@ -73,7 +73,7 @@
     "rating": 4.9,
     "reviewCount": 789,
     "amenities": ["باغ", "رستوران", "wifi", "پارکینگ"],
-    "cancellation": "paid",
+    "cancellation": false,
     "breakfast": true,
     "image": "https://www.eghamat24.com/app/public/new_images/282x176/Mashhad-Qasr_talaee-23.webp"
   }

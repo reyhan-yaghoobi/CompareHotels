@@ -1,0 +1,195 @@
+.compare-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__back-btn {
+    border: none;
+    background: $primary-color;
+    color: $white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+
+    &:hover {
+      background-color: lighten($primary-color, 20%)
+    }
+  }
+}
+
+.compare-table {
+  width: 100%;
+  direction: rtl;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 200px;
+    border-bottom: 2px solid #eee;
+    align-items: stretch;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--header {
+      .compare-table__col {
+        align-items: flex-start;
+        padding-top: 20px;
+      }
+
+      .compare-table__label {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__label {
+    padding: 15px 20px;
+    color: $text-color;
+    font-size: 15px;
+    text-align: right;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  &__col {
+    padding: 15px;
+    text-align: center;
+    border-left: 1px solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+      border-right: none;
+    }
+  }
+
+  &__card {
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__hotel-name {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #333;
+  }
+
+  &__city {
+    font-size: 12px;
+    color: #999;
+  }
+
+  &__reviews, &__breakfast, &__cancellation {
+    font-weight: 800;
+    color: $text-color;
+  }
+
+  &__price {
+    font-weight: 800;
+    color: $text-color;
+
+    &.is-cheapest {
+      color: #27ae60;
+
+      &::after {
+        content: '🏆';
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__rating {
+    font-weight: 800;
+    color: $text-color;
+
+    transition: color 0.3s ease;
+
+    &.is-highest-rated {
+      color: #3498db;
+    }
+  }
+
+  &__stars {
+    color: $text-color;
+    letter-spacing: 2px;
+  }
+
+  &__breakfast-status {
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+
+    &.is-available {
+      color: #27ae60;
+
+      &::before {
+        content: '✔';
+        font-size: 1.1em;
+        color: #27ae60;
+      }
+    }
+
+    &.is-unavailable {
+      color: #e74c3c;
+
+      &::before {
+        content: '✘';
+        font-size: 1.1em;
+        color: #e74c3c;
+      }
+    }
+  }
+
+  &__amenities-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    direction: rtl;
+  }
+
+  &__amenity {
+    font-size: 10px;
+    background-color: $background-color;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #888;
+    white-space: nowrap;
+    border: 1px solid #eee;
+  }
+}

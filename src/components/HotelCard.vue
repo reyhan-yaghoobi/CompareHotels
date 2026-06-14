@@ -12,8 +12,9 @@ const handlerClick = () => {
 
 const formatPrice = (price) => {
   return price.toLocaleString("en-US")
-
 }
+
+const isDisable = computed(() => store.selectedCount >= 3 && !store.isSelected(props.hotel.id))
 
 const props = defineProps({
   hotel: {
@@ -24,7 +25,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="hotel-card">
+  <div class="hotel-card"
+       :class="{
+    'hotel-card--selected': store.isSelected(hotel.id),
+    'hotel-card--disabled' : isDisable
+    }">
     <div class="hotel-card__image">
       <img class="hotel__image" :src="hotel.image" :alt="hotel.name"/>
 
@@ -60,7 +65,10 @@ const props = defineProps({
             <p class="hotel__Unit">تومان</p>
           </div>
         </div>
-        <button @click="handlerClick" class="hotel__compare-btn">مقایسه</button>
+        <button @click="handlerClick"
+                class="hotel__compare-btn" :disabled="isDisable">
+          {{ store.isSelected(props.hotel.id) ? 'حذف' : 'مقایسه' }}
+        </button>
       </div>
     </div>
   </div>

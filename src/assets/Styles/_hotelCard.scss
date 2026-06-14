@@ -8,6 +8,18 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
 
+  &--selected {
+    border: 2px solid $primary-color;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    filter: grayscale(70%);
+
+  }
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.1);
@@ -130,7 +142,7 @@
       background: transparent;
       transition: 0.3s;
 
-      &:hover{
+      &:hover {
         background-color: $primary-color;
         color: $white;
       }

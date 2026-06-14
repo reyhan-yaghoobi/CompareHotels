@@ -1,7 +1,7 @@
 <script setup>
 import hotels from "../data/hotels.json"
 import HotelCard from "./HotelCard.vue";
-import Compare from "@/components/Compare.vue";
+
 
 const props = defineProps({
   hotels: Object

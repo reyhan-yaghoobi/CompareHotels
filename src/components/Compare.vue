@@ -1,7 +1,12 @@
 <script setup>
 import {useHotelsStore} from "@/stores/hotels.js";
+import router from "@/router/index.js";
 
 const store = useHotelsStore()
+
+const goToCompare=()=>{
+  router.push("/compare")
+}
 </script>
 
 <template>
@@ -17,9 +22,9 @@ const store = useHotelsStore()
       </div>
 
       <div class="compare-bar__actions">
-        <button class="compare-bar__btn-clear" @click="store.selectedHotels = []">پاک کردن</button>
+        <button class="compare-bar__btn-clear" @click="store.selectedHotels = []" >پاک کردن</button>
 
-        <button class="compare-bar__btn-compare" :disabled="!store.isCompare">مقایسه کن</button>
+        <button  @click="goToCompare"  class="compare-bar__btn-compare" :disabled="!store.isCompare"> مقایسه کن</button>
       </div>
     </div>
   </div>
