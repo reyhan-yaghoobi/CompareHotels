@@ -3,7 +3,6 @@ import {computed} from "vue";
 import {useHotelsStore} from "@/stores/hotels.js";
 import {useRouter} from "vue-router";
 
-
 const store = useHotelsStore()
 
 const router = useRouter()
@@ -32,7 +31,7 @@ const priceStats = computed(() => {
 });
 
 
-const ratingStats = computed(() => {
+const ratingStats = computed(function () {
   if (selectedHotels.value.length === 0) {
     return {min: null, max: null};
   }
@@ -59,8 +58,6 @@ const ratingStats = computed(() => {
     </header>
 
     <div class="compare-table">
-
-
       <div class="compare-table__row compare-table__row--header">
         <div class="compare-table__label">
           مشخصات هتل
@@ -78,7 +75,6 @@ const ratingStats = computed(() => {
         </div>
       </div>
 
-
       <div class="compare-table__row">
         <div class="compare-table__label">
           قیمت هر شب
@@ -89,13 +85,11 @@ const ratingStats = computed(() => {
             :key="hotel.id"
             class="compare-table__col">
 
-          <span class="compare-table__price"
-                :class="{ 'is-cheapest': hotel.pricePerNight === priceStats.min }">{{
-              formatPrice(hotel.pricePerNight)
-            }}تومان</span>
+          <span class="compare-table__price" :class="{ 'is-cheapest': hotel.pricePerNight === priceStats.min }">
+            {{ formatPrice(hotel.pricePerNight) }}تومان
+          </span>
         </div>
       </div>
-
 
       <div class="compare-table__row">
         <div class="compare-table__label">
@@ -111,7 +105,6 @@ const ratingStats = computed(() => {
         </div>
       </div>
 
-
       <div class="compare-table__row">
         <div class="compare-table__label">
           تعداد نظرات
@@ -125,7 +118,6 @@ const ratingStats = computed(() => {
         </div>
       </div>
 
-
       <div class="compare-table__row">
         <div class="compare-table__label">
           درجه هتل
@@ -138,7 +130,6 @@ const ratingStats = computed(() => {
           <span class="compare-table__stars"> {{ "★".repeat(hotel.stars) }}</span>
         </div>
       </div>
-
 
       <div class="compare-table__row">
         <div class="compare-table__label">
@@ -155,7 +146,6 @@ const ratingStats = computed(() => {
         </div>
       </div>
 
-
       <div class="compare-table__row">
         <div class="compare-table__label">
           لغو رزرو
@@ -169,7 +159,6 @@ const ratingStats = computed(() => {
         </div>
       </div>
 
-
       <div class="compare-table__row">
         <div class="compare-table__label">
           امکانات
@@ -178,14 +167,13 @@ const ratingStats = computed(() => {
         <div
             v-for="hotel in store.selectedHotels"
             :key="hotel.id"
-            class="compare-table__col">
+            class="compare-table__col"
+        >
           <div class="compare-table__amenities-wrapper">
             <span class="compare-table__amenity" v-for="item in hotel.amenities" :key="item">{{ item }}</span>
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
 </template>
